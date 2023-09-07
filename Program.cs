@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddEntityFrameworkNpgsql()
-    .AddDbContext<ApplicationContext>(contextOptions => contextOptions.UseNpgsql("host=localhost port=5432 dbname=entityframework user=entity password=microsoft sslmode=prefer sslcompression=0 connect_timeout=30"));
+    .AddDbContext<ApplicationContext>(contextOptions => contextOptions.UseNpgsql("host=localhost;port=5432;database=entityframework;user id=entity;password=microsoft"));
 
 var app = builder.Build();
 
